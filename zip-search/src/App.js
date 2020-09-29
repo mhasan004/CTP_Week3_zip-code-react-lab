@@ -3,7 +3,7 @@ import './App.css';
 const url = "http://ctp-zip-api.herokuapp.com/zip/"
 
 
-class Cities extends React.Component{                 // C) Child Class - ** NESTIGN COMPONENTS: WILL USE THIS COMPONENT INSIDE ANOTHER COMPONENT
+class Cities extends React.Component{                     // C) Child Class - ** NESTIGN COMPONENTS: WILL USE THIS COMPONENT INSIDE ANOTHER COMPONENT
   render() { 
     let cityArray = []                                      // a) make an array of objs to make components of
     this.props.cities.forEach(i => {                        // b) gett props from Parent class (App)
@@ -12,11 +12,7 @@ class Cities extends React.Component{                 // C) Child Class - ** NES
 
     return(
       <div>
-        {
-          cityArray.map(c => 
-            <City city={c}/>
-          )
-        }
+        {cityArray.map(c => <City city={c}/>)}
       </div>
     )
   }
